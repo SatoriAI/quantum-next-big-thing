@@ -1,0 +1,15 @@
+# Environment
+.venv/
+.env
+
+# Python and Jupyter
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# macOS
+.DS_Store
+
+# Local helpers and per-run state
+test.py
+notebooks/ibm_job.json
