@@ -58,3 +58,12 @@ def load_ibm(name):
     """Counts saved by 00_ibm.ipynb, plus backend name and date."""
     data = json.loads(RESULTS.read_text())
     return data[name]["counts"], data[name]["backend"], data[name]["date"]
+
+
+def load_grover(secret):
+    """Grover counts for the given secret, plus backend, date and the secret actually run (as bits).
+    Results files from before the 8-secret run contain only secret 5."""
+    data = json.loads(RESULTS.read_text())
+    key = f"grover_{secret}" if f"grover_{secret}" in data else "grover"
+    bits = format(secret, "03b") if key != "grover" else "101"
+    return data[key]["counts"], data[key]["backend"], data[key]["date"], bits

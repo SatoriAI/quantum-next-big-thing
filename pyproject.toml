@@ -2,7 +2,7 @@
 
 name = "dss"
 version = "0.1.0"
-description = "Add your description here"
+description = "Live demos and learning notebooks for the talk Quantum computing: next big thing?"
 readme = "README.md"
 
 requires-python = ">=3.12"
